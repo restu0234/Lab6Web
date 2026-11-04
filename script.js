@@ -25,7 +25,6 @@ namaInput.addEventListener("input", function() {
 });
 
 
-
 const form = document.getElementById("FormPendaftaran");
 const pesanForm = document.getElementById("pesanForm");
 form.addEventListener("submit", function(event) {
