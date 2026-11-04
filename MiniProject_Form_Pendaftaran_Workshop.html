@@ -1,0 +1,39 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Pendaftaran</title>
+        <link rel="stylesheet" href="style1.css">
+        
+    </head>
+    <body>
+        <style>
+            body {
+                background-color: aliceblue;
+            }
+        </style>
+        <h1 align="center">Form Pendaftaran Workshop</h1>
+            <form id="PendaftaranWorkshop" align="center">
+                <fieldset>
+                        <legend>Form Pendaftaran Workshop</legend>
+                    <label for="namaPendaftar">Nama Peserta</label><br>
+                    <input id="namaPendaftar" name="namaPendaftar" type="text"><br>
+                    <p>Jumlah Karakter: <span id="Karakter">0</span></p>
+                    <label for="email">Email</label><br>
+                    <input id="email" name="email" type="email"><br><br>
+                    <label for="workshop">Pilih Workshop</label><br>
+                    <select id="workshop" name="workshop">
+                        <option value="">--Pilih Workshop--</option>
+                        <option value="workshop1">Pemrograman Web</option>
+                        <option value="workshop2">Desain UI/UX</option>
+                        <option value="workshop3">Data Science</option>
+                    </select><br><br>
+                    <button type="submit">Daftar</button>
+                    <button type="reset">Reset</button>
+                    <p id="pesanWorkshop" aria-live="polite"></p>
+                </fieldset>
+            </form>
+            <script src="script1.js" defer></script>
+    </body>
