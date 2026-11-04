@@ -23,7 +23,7 @@
 ![Gambar16](media/Daftar_tugas_awal.png)
 ![Gambar17](media/Daftar_tugas_sekarang.png)
 
-# MINI PROJECT FORM PENDAFTARAN WORKSHOP
+# MINI-PROJECT FORM PENDAFTARAN WORKSHOP
 ![Gambar18](media/form_masih_kosong.png)
 ![Gambar19](media/form_email_kosong.png)
 ![Gambar20](media/email_invalid.png)
