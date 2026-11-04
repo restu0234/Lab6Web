@@ -19,9 +19,12 @@ tombolGaya.addEventListener("click", function() {
 const namaInput = document.getElementById("namaInput");
 const jumlahKarakter = document.getElementById("jumlahKarakter");
 
+
 namaInput.addEventListener("input", function() {
     jumlahKarakter.textContent = namaInput.value.length;
 });
+
+
 
 const form = document.getElementById("FormPendaftaran");
 const pesanForm = document.getElementById("pesanForm");
