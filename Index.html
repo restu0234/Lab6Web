@@ -24,7 +24,7 @@
     <hr style="border: 1px solid #ccc; margin: 20px 0;">
     <form id="FormPendaftaran" novalidate> 
         <label for="nama">Nama Lengkap</label><br>
-        <input id="nama" name="nama" type="text"><br><br>
+        <input id="nama" name="nama" type="text"  maxlength="100"><br><br>
         <label for="email">Email</label><br>
         <input id="email" name="email" type="email"><br><br>
         <label for="usia">Usia</label><br>
@@ -38,6 +38,7 @@
         <label for="inputTugas">Tugas Baru</label><br>
         <input id="inputTugas" type="text">
         <button id="tambahTugas" type="button">Tambah</button>
+        <button id="hapusTugas" type="button">Hapus</button>
         <p id="pesanTugas" aria-live="polite"></p>
         <ul id="daftarTugas"></ul>
     </section>
