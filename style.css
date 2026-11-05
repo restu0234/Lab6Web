@@ -10,3 +10,16 @@
 .selesai span { text-decoration: line-through; color: #687386; }
 li { margin-bottom: 8px; }
 
+/* Efek visual ketika sebuah tugas (li) dipilih/diklik */
+#daftarTugas li.terpilih {
+    background-color: #e0f7fa;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+
+/* Membuat list item terasa seperti bisa diklik */
+#daftarTugas li {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
