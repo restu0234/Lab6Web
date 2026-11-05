@@ -31,6 +31,24 @@
 ![Gambar22](media/form_berhasil.png)
 ![Gambar23](media/form_direset.png)
 
+# EKSPERIMEN MANDIRI
+1. **Menambahkan tombol untuk menghapus satu item dari To-do List.**
+![Gambar24](media/section_input.png)
+![Gambar25](media/button_hapus.png)
+![Gambar26](media/event_listener_input.png)
+![Gambar27](media/toogle_menghapus.png)
+![Gambar28](media/event_listener_hapus.png)
+![Gambar29](media/Hapus_satu_tugas.png)
+![Gambar30](media/satu_tugas_terhapus.png)
+![Gambar31](media/hapus_tiga_tugas.png)
+![Gambar32](media/tiga_tugas_terhapus.png)
+![Gambar33](media/tidak_ada_tugas_dipilih.png)
+
+2. **Mengubah validasi agar input nama minimal terdiri dari 3 karakter**
+![Gambar34](media/kode_js_validasi_nama.png)
+![Gambar35](media/Validasi_nama_kosong.png)
+![Gambar36](media/Validasi_nama_min_3_karakter.png)
+
 
 
 Berikut adalah jawaban untuk pertanyaan evaluasi:
