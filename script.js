@@ -37,6 +37,8 @@ form.addEventListener("submit", function(event) {
 
     if (nama === "") {
         pesanForm.textContent = "Nama Wajib diisi.";
+    } else if (nama.length < 3) {
+        pesanForm.textContent = "Nama harus memiliki minimal 3 karakter.";
     } else if (!polaEmail.test(email)) {
         pesanForm.textContent = "Masukkan email yang valid.";
     } else if (usiaInput === "" || !Number.isInteger(usia) || usia < 17 || usia > 100) {
@@ -52,6 +54,7 @@ const inputTugas = document.getElementById("inputTugas");
 const tambahTugas = document.getElementById("tambahTugas");
 const pesanTugas = document.getElementById("pesanTugas");
 const daftarTugas = document.getElementById("daftarTugas");
+const hapusTugas = document.getElementById("hapusTugas");
 
 tambahTugas.addEventListener("click", function() {
     const teks = inputTugas.value.trim();
@@ -68,10 +71,41 @@ tambahTugas.addEventListener("click", function() {
         item.classList.toggle("selesai");
         selesai.textContent = item.classList.contains("selesai") ? "Batalkan Selesai" : "Tandai Selesai";
     });
+   // Tambahkan event click pada item (li) untuk memilih banyak tugas sekaligus
+    item.addEventListener("click", function(e) {
+        // Mencegah klik pada tombol "Tandai Selesai" memicu seleksi
+        if (e.target.tagName === "BUTTON") return;
+
+        // Menggunakan toggle agar bisa menambah atau membatalkan pilihan secara independen
+        item.classList.toggle("terpilih");
+
+        if (item.classList.contains("terpilih")) {
+            item.style.backgroundColor = "#e0f7fa"; // Warna latar saat dipilih
+        } else {
+            item.style.backgroundColor = ""; // Hapus warna jika batal dipilih
+        }
+        
+        pesanTugas.textContent = ""; 
+    });
     item.append(label, selesai);
     daftarTugas.appendChild(item);
     inputTugas.value = "";
     pesanTugas.textContent = "Tugas berhasil ditambahkan.";
     inputTugas.focus();
+});
+
+hapusTugas.addEventListener("click", function() {
+    // Mencari SEMUA elemen li yang memiliki kelas "terpilih"
+    const tugasTerpilih = daftarTugas.querySelectorAll("li.terpilih");
+    
+    // Cek apakah ada tugas yang dipilih (panjangnya lebih dari 0)
+    if (tugasTerpilih.length > 0) {
+        tugasTerpilih.forEach(function(item) {
+            daftarTugas.removeChild(item);
+        });
+        pesanTugas.textContent = "Semua tugas terpilih berhasil dihapus.";
+    } else {
+        pesanTugas.textContent = "Tidak ada tugas yang dipilih untuk dihapus.";
+    }
 });
 
